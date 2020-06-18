@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import configparser
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -70,18 +71,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangochat.wsgi.application'
 
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+conf = configparser.ConfigParser()
+conf.read(MEDIA_ROOT+'/config/config.ini')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'databasename',
-        'USER': 'username',
-        'PASSWORD': 'password',
-        'HOST': 'host',
-        'PORT':'port'
+        'NAME': conf.get('global', 'database'),
+        'USER': conf.get('global', 'username'),
+        'PASSWORD': conf.get('global', 'password'),
+        'HOST': conf.get('global', 'host'),
+        'PORT': conf.get('global', 'port')
     }
 }
 
