@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'djangochat.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'djangochat',
-        'USER': 'djangochat',
-        'PASSWORD': 'magicbook@123',
-        'HOST': 'localhost',
-        'PORT':'5432'
+        'NAME': 'databasename',
+        'USER': 'username',
+        'PASSWORD': 'password',
+        'HOST': 'host',
+        'PORT':'port'
     }
 }
 
