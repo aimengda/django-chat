@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DjangoChat - Register</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chat/login.css' %}">
+    <link rel="stylesheet" href="{% static 'chat/bootstrap/css/bootstrap.css' %}">
+    <script source="{% static 'chat/bootstrap/jQuery-3.5.1.js' %}"></script>
+    <script source="{% static 'chat/bootstrap/js/bootstrap.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card text-center mt-5 ml-auto mr-auto" style="width: 60%;">
+            <div class="card-body">
+                <p class="card-title">Register</p>
+                <form method="POST">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </form>    
+            </div>
+        </div>
+    </div>
+</body>
+</html>
