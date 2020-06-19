@@ -1,9 +1,7 @@
 # django-chat
-___
 small real time chat app based on Django
 
 ## Setup
-___
 ### Python Setup
 Install python 3.8.3( don't forget to add python to PATH), after installation, open your cmd and run the following command in the folder you want the virtual environment in.
 

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DjangoChat</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chat/login.css' %}">
+    <link rel="stylesheet" href="{% static 'chat/bootstrap/css/bootstrap.css' %}">
+    <script source="{% static 'chat/bootstrap/jQuery-3.5.1.js' %}"></script>
+    <script source="{% static 'chat/bootstrap/js/bootstrap.js' %}"></script>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
