@@ -71,7 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangochat.wsgi.application'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
